@@ -1,0 +1,37 @@
+[
+    {
+    "img": "src",
+    "title": "סינדרלה",
+    "price": "400-550",
+    "size": "2-10",
+    "category":"purimCollection"
+},
+   {
+    "img": "https://res.cloudinary.com/dtepttwll/image/upload/v1657524462/Screenshot_20210103-094726_Facebook_ag76f0.jpg",
+    "title": "הנסיכה בל",
+    "price": "400-550",
+    "size": "2-10",
+    "category":"purimCollection"
+},
+   {
+    "img": "https://res.cloudinary.com/dtepttwll/image/upload/v1657523758/20211216_132805_envgtn.jpg",
+    "title": "פינוקיו",
+    "price": "270-400",
+    "size": "2-16",
+    "category":"purimCollection"
+},
+   {
+    "img": "src",
+    "title": "פיטר פן",
+    "price": "270-400",
+    "size": "2-16",
+    "category":"purimCollection"
+},
+    {
+    "img": "https://res.cloudinary.com/dtepttwll/image/upload/v1657524623/DSC_4751_xjgoza.jpg",
+    "title": "שמלת בת מצווה",
+    "price": "600",
+    "size": "12-18",
+    "category":"batMizvaCollection"
+}
+]

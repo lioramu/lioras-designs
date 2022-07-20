@@ -1,11 +1,17 @@
-import "../styles/globals.css";
-import ButtonsMenu from "../components/ButtonsMenu";
+import '../styles/globals.css';
+import ButtonsMenu from '../components/ButtonsMenu';
+import CartProvider from '../context/CartContext';
+import ShoppingCart from '../components/ShoppingCart';
+import Drawer from '../components/Drawer';
+
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
+    <CartProvider>
       <ButtonsMenu />
+      <Drawer />
+      {/* <ShoppingCart /> */}
       <Component {...pageProps} />;
-    </div>
+    </CartProvider>
   );
 }
 

@@ -1,9 +1,9 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import ButtonBase from "@mui/material/ButtonBase";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
-import PurimCollection from "../pages/PurimCollection";
 
 const images = [
   {
@@ -137,6 +137,8 @@ export default function ButtonBases() {
           </a>
         </Link>
       ))}
+      
     </Box>
+    
   );
 }
