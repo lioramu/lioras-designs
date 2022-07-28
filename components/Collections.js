@@ -1,29 +1,22 @@
 import { useContext, useEffect, useState } from 'react';
 import { CartContext } from '../context/CartContext';
 import Link from 'next/link';
-import Product from '../components/Product/Product';
+import Product from './Product/Product';
 import styles from '../styles/Home.module.css';
 
-function PurimCollection() {
-  const [purimCollection, setPurimCollection] = useState([]);
+function Collections({ category }) {
+  const [collection, setCollection] = useState([]);
   const { name } = useContext(CartContext);
 
   useEffect(() => {
-    fetch('/api/purim')
+    fetch(`/api/${category}`)
       .then((res) => res.json())
-      .then((purimCollection) => setPurimCollection(purimCollection));
+      .then((_category) => setCollection(_category));
   }, []);
 
   return (
-    <>
-      <h2>
-        <Link href="/">
-          <a> חזרה לראשי </a>
-        </Link>
-      </h2>
-
-      <section className={styles.purimCollection}>
-        {purimCollection.map((product) => {
+      <section className={styles.Collection}>
+        {collection.map((product) => {
           return product.img !== 'src' ? (
             <div>
               <Product
@@ -32,20 +25,11 @@ function PurimCollection() {
                 title={product.title}
                 price={product.price}
                 image={product.img}
-                />
+              />
             </div>
-          ) : null;
+          ) : null
         })}
       </section>
-    </>
   );
 }
-export default PurimCollection;
-
-
-
-
-
-
-
-
+export default Collections;

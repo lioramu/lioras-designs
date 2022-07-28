@@ -4,7 +4,7 @@
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 1rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -12,11 +12,51 @@
   align-items: center;
 }
 
+.home{
+margin-left: 43%;
+}
+
+.drawer{
+  margin-left:60%;
+  
+}
+.carousel{
+  padding: 4rem;
+}
+
+.Collection{
+min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+justify-content: space-around;
+}
+
+.ShoppingCart{
+min-height: 30vh;
+  padding: 2rem 1;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.whatsapp {
+position: fixed;
+right: 0;
+bottom: 0;
+z-index: 144444444;
+}
+
 .footer {
   display: flex;
   flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
+  padding: 4rem 0;
+  border-top: 1px solid white;
   justify-content: center;
   align-items: center;
 }
@@ -53,7 +93,7 @@ margin: 0;
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
-  
+  font-family: 'Brush Script MT', cursive;
 }
 
 .title,
@@ -68,7 +108,7 @@ margin: 0;
   }
 
 .description {
-  margin: 4rem 0;
+  margin: 1rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
 }
@@ -131,4 +171,3 @@ margin: 0;
     flex-direction: column;
   }
 }
- 

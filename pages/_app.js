@@ -1,16 +1,12 @@
 import '../styles/globals.css';
-import ButtonsMenu from '../components/ButtonsMenu';
 import CartProvider from '../context/CartContext';
-import ShoppingCart from '../components/ShoppingCart';
-import Drawer from '../components/Drawer';
+import Whatsapp from '../components/Whatsapp';
 
 function MyApp({ Component, pageProps }) {
   return (
     <CartProvider>
-      <ButtonsMenu />
-      <Drawer />
-      {/* <ShoppingCart /> */}
       <Component {...pageProps} />;
+      <Whatsapp />
     </CartProvider>
   );
 }

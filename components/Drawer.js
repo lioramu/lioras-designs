@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -12,16 +11,17 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import ShoppingCart from './ShoppingCart';
+import styles from '../styles/Home.module.css';
+import LocalMallSharpIcon from '@mui/icons-material/LocalMallSharp';
+
+import { red } from '@mui/material/colors';
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
-    top: false,
-    left: false,
-    bottom: false,
     right: false,
   });
 
-  const toggleDrawer = (anchor, open) => (event) => {
+  const toggleDrawer = (top, open) => (event) => {
     if (
       event.type === 'keydown' &&
       (event.key === 'Tab' || event.key === 'Shift')
@@ -29,22 +29,19 @@ export default function TemporaryDrawer() {
       return;
     }
 
-    setState({ ...state, [anchor]: open });
+    setState({ ...state, [top]: open });
   };
-  
 
-  const list = (anchor) => (
+  const list = (top) => (
     <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+      sx={{ width: top === 'top' || top === 'bottom' ? 'auto' : 250 }}
       role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
+      onClick={toggleDrawer(top, false)}
+      onKeyDown={toggleDrawer(top, false)}
     >
-      
-        
       <Divider />
       <List>
-        {["'All mail', 'Trash', 'Spam'"].map((text, index) => (
+        {['השארת פרטים לחזרה'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -59,22 +56,22 @@ export default function TemporaryDrawer() {
   );
 
   return (
-    <div>
-      {[ 'מוצרים נבחרים'].map((anchor) => (
-        <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+    <span className={styles.drawer}>
+      {['top'].map((top) => (
+        <React.Fragment key={top}>
+          <Button onClick={toggleDrawer(top, true)}>
+            {<LocalMallSharpIcon sx={{ fontSize: 38, color: red[800] }} />}
+          </Button>
           <Drawer
-            anchor={anchor}
-            open={state[anchor]}
-            onClose={toggleDrawer(anchor, false)}
+            anchor={'top'}
+            open={state[top]}
+            onClose={toggleDrawer(top, false)}
           >
-            {list(anchor)}
-                  <ShoppingCart />
-
+            {list(top)}
+            <ShoppingCart />
           </Drawer>
-          
         </React.Fragment>
       ))}
-    </div>
+    </span>
   );
 }
