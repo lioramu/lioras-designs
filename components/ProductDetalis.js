@@ -11,9 +11,7 @@ const ProductDetalisid = ({ product }) => {
       <div _id={product._id} value={product.title}></div>
       <h5>{product.title}</h5>
       <h6>{product.price}</h6>
-      <button className="btn" onClick={() => insertProduct(product)}>
-        +{' '}
-      </button>
+      
     </div>
   );
 };

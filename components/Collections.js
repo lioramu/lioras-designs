@@ -12,7 +12,7 @@ function Collections({ category }) {
     fetch(`/api/${category}`)
       .then((res) => res.json())
       .then((_category) => setCollection(_category));
-  }, []);
+  }, [category]);
 
   return (
       <section className={styles.Collection}>
@@ -27,7 +27,7 @@ function Collections({ category }) {
                 image={product.img}
               />
             </div>
-          ) : null
+          ) : null;
         })}
       </section>
   );

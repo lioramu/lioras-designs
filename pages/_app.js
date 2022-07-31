@@ -4,11 +4,12 @@ import Whatsapp from '../components/Whatsapp';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <CartProvider>
-      <Component {...pageProps} />;
-      <Whatsapp />
-    </CartProvider>
+
+      <CartProvider>
+        <Component {...pageProps} />;
+        <Whatsapp />
+      </CartProvider>
+
   );
 }
-
 export default MyApp;

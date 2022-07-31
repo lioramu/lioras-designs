@@ -15,7 +15,7 @@ const user = new Schema({
     type: String,
     required: true,
   },
-  since: {
+  date: {
     type: Date,
     default: Date.now(),
   },

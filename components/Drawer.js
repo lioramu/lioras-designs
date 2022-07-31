@@ -13,7 +13,6 @@ import MailIcon from '@mui/icons-material/Mail';
 import ShoppingCart from './ShoppingCart';
 import styles from '../styles/Home.module.css';
 import LocalMallSharpIcon from '@mui/icons-material/LocalMallSharp';
-
 import { red } from '@mui/material/colors';
 
 export default function TemporaryDrawer() {
@@ -43,7 +42,8 @@ export default function TemporaryDrawer() {
       <List>
         {['השארת פרטים לחזרה'].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
+      
+            <ListItemButton >
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
