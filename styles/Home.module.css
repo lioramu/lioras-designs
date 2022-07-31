@@ -14,13 +14,12 @@
 }
 
 .home{
-margin-left: 43%;
+display:flex;
+justify-content: center;
+flex-wrap: nowrap;
 }
 
-.drawer{
-  margin-left:60%;
-  
-}
+
 .carousel{
   padding: 4rem;
 }
